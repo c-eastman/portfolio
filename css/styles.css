@@ -10,18 +10,26 @@ body{
 }
 
 header{
-	padding:2.2em;	
+	padding-top:10px;
+	padding-bottom:130px;
 	padding-left:10%;
 	padding-right:10%;
 }
 
 header > h1{
 	float:left;
-	margin-right:4em;
+	margin-right:2em;
+	width: 144px; 
+  	height: 156px;
+  	background: url("../images/net-head logo.png");
+  	text-indent: -9999px;
+	
 }
 
 header > h2{
-	margin-top:.4em;
+	position:relative;
+	top:3.2em;
+	font-size:2.2em;
 	font-style:italic;	
 }
 
