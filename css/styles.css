@@ -11,7 +11,7 @@ body{
 
 header{
 	padding-top:10px;
-	padding-bottom:130px;
+	padding-bottom:80px;
 	padding-left:10%;
 	padding-right:10%;
 }
@@ -19,8 +19,8 @@ header{
 header > h1{
 	float:left;
 	margin-right:2em;
-	width: 144px; 
-  	height: 156px;
+	width: 102px; 
+  	height: 110px;
   	background: url("../images/net-head logo.png");
   	text-indent: -9999px;
 	
@@ -28,7 +28,7 @@ header > h1{
 
 header > h2{
 	position:relative;
-	top:3.2em;
+	top:2em;
 	font-size:2.2em;
 	font-style:italic;	
 }
@@ -75,13 +75,86 @@ nav > div > a:hover{
 
 #wrapper{
 	margin:0 auto;
-	width:50%;	
+	width:52%;	
+}
+
+#wrapper.projects{
+	width:75%;
+	text-align:center;	
+}
+
+#wrapper.projects > section#main > div{
+	border:1px black solid;
+	radius:10px;
+	height:320px;
+	width:29%;	
+	float:left;
+	margin-right:5%;
+	margin-top:2em;
+}
+
+#wrapper.projects > section#main > div + div + div{
+	margin:0;	
+	margin-top:2em;
+}
+
+#wrapper.projects > section#main > div > img{
+	width:90%;
+	margin:0 auto;
+	height:250px;	
+	margin-bottom:10px;
 }
 
 #main > h3{
 	font-size:1.5em;	
 }
 
+footer, .push{
+	height:5em;
+	width:100%;
+}
+
+footer{
+	text-align:center;	
+	clear:both;
+}
+
+footer > p{
+	position:relative;
+	top:50px;
+	font-size:.9em;	
+}
+
+aside{
+	float:right;
+	border:1px solid black;
+	height:100px;
+	width:180px;
+	margin-right:7%;
+	position:relative;
+	top:320px;	
+	padding-5px;
+	border-radius:10px;
+}
+
+aside > h4{
+	text-align:center;	
+	margin-bottom:10px;
+}
+
+aside > a > img{
+	display:block;
+	margin:0 auto;	
+}
+
+a.button{
+	float:right;
+	position:relative;
+	top:320px;	
+	clear:both;
+	margin-right:7%;
+	margin-top:10px;
+}
 
 /* http://www.menucool.com */
 
