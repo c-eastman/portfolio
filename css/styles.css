@@ -91,6 +91,20 @@ nav > div > a:hover{
 	float:left;
 	margin-right:5%;
 	margin-top:2em;
+	background:#3a87b5;
+	color:white;
+}
+
+#wrapper.projects > section#main > div > a{
+	color:white;	
+}
+
+#wrapper.projects > section#main > div > a:visited{
+	color:white;	
+}
+
+#wrapper.projects > section#main > div > a:hover{
+	color:black;	
 }
 
 #wrapper.projects > section#main > div + div + div{
@@ -128,11 +142,11 @@ footer > p{
 aside{
 	float:right;
 	border:1px solid black;
-	height:100px;
+	height:80px;
 	width:180px;
 	margin-right:7%;
 	position:relative;
-	top:320px;	
+	top:300px;	
 	padding-5px;
 	border-radius:10px;
 }
@@ -150,12 +164,15 @@ aside > a > img{
 a.button{
 	float:right;
 	position:relative;
-	top:320px;	
+	top:300px;	
 	clear:both;
 	margin-right:7%;
 	margin-top:10px;
 }
 
+.projects > #main > div > h4{
+	margin-bottom:10px;	
+}
 /* http://www.menucool.com */
 
 #sliderFrame 
