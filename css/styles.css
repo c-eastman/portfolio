@@ -90,7 +90,7 @@ nav > div > a:hover{
 	width:29%;	
 	float:left;
 	margin-right:5%;
-	margin-top:2em;
+	margin-top:1em;
 	background:#3a87b5;
 	color:white;
 }
@@ -108,8 +108,7 @@ nav > div > a:hover{
 }
 
 #wrapper.projects > section#main > div + div + div{
-	margin:0;	
-	margin-top:2em;
+	margin-right:0;	
 }
 
 #wrapper.projects > section#main > div > img{
@@ -128,7 +127,7 @@ nav > div > a:hover{
 	margin-bottom:13px;
 }
 
-#wrapper.about > section#main > h3{
+section#main > h3{
 	margin-bottom:10px;	
 }
 
@@ -137,8 +136,22 @@ nav > div > a:hover{
 	margin-bottom:10px;
 }
 
+#wrapper.services > section#main > p{
+	text-align:justify;
+	margin-bottom:10px;	
+}
+
+#wrapper.services > section#main > ul{
+	margin-left:20px;
+	margin-bottom:10px;	
+}
+
 #main > h3{
 	font-size:1.5em;	
+}
+
+#main > p{
+	margin-top:20px;	
 }
 
 footer, .push{
@@ -155,6 +168,18 @@ footer > p{
 	position:relative;
 	top:50px;
 	font-size:.9em;	
+}
+
+footer.services, #push.services{
+	height:2em;	
+}
+
+footer.contact, #push.contact{
+	padding-top:10em;	
+}
+
+footer.about{
+	padding-top:1em;	
 }
 
 aside{
@@ -177,6 +202,13 @@ aside > h4{
 aside > a > img{
 	display:block;
 	margin:0 auto;	
+}
+
+aside.contact{
+	top:0;
+	clear:both;
+	float:left;
+	margin-top:30px;	
 }
 
 a.button{
