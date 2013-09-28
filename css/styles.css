@@ -1,38 +1,43 @@
+/*
+	Author: Chris Eastman
+	Since: September 28, 2013
+*/
+
+/*Set default values for entire page*/
 *{
 	margin:0;
 	padding:0;
 	border:0;
 }
 
+/*Font size and family*/
 body{
 	font-size:16px;	
 	font-family:Tahoma, Geneva, sans-serif;
 }
 
+/*Header Styles*/
 header{
 	padding-top:10px;
 	padding-bottom:80px;
 	padding-left:10%;
 	padding-right:10%;
 }
-
 header > h1{
 	float:left;
 	margin-right:2em;
 	width: 102px; 
   	height: 110px;
   	background: url("../images/net-head logo.png");
-  	text-indent: -9999px;
-	
+  	text-indent: -9999px;	
 }
-
 header > h2{
 	position:relative;
 	top:2em;
 	font-size:2.2em;
 	font-style:italic;	
 }
-
+/*Navigation Styles*/
 nav{
 	width:100%;
 	background:#3a87b5;
@@ -41,7 +46,6 @@ nav{
 	border-bottom:black 2px solid;
 	margin-bottom:.5em;
 }
-
 nav > div{
 	float:left;
 	width:16.6%;
@@ -49,11 +53,9 @@ nav > div{
 	font-size:1.2em;
 	border-radius:2px;
 }	
-
 nav > div:first-child{
 	border-left:0;	
 }
-
 nav > div > a{
 	display:block;
 	width:100%;	
@@ -62,126 +64,45 @@ nav > div > a{
 	line-height:2.5em;
 	border-left:2px black solid;
 }
-
 nav > div > a.active{
 	background:white;
 	color:#3a87b5;
 }
-
 nav > div > a:hover{
 	background:white;
 	color:#3a87b5;
 }
-
+/*Wrapper/container styles*/
 #wrapper{
 	margin:0 auto;
 	width:52%;	
 }
 
-#wrapper.projects{
-	width:75%;
-	text-align:center;	
-}
-
-#wrapper.projects > section#main > div{
-	border:1px black solid;
-	radius:10px;
-	height:320px;
-	width:29%;	
-	float:left;
-	margin-right:5%;
-	margin-top:1em;
-	background:#3a87b5;
-	color:white;
-}
-
-#wrapper.projects > section#main > div > a{
-	color:white;	
-}
-
-#wrapper.projects > section#main > div > a:visited{
-	color:white;	
-}
-
-#wrapper.projects > section#main > div > a:hover{
-	color:black;	
-}
-
-#wrapper.projects > section#main > div + div + div{
-	margin-right:0;	
-}
-
-#wrapper.projects > section#main > div > img{
-	width:90%;
-	margin:0 auto;
-	height:250px;	
-	margin-bottom:10px;
-}
-
-#wrapper.about > section#main > img{
-	display:block;
-	width:200px;
-	height:200px;
-	float:right;	
-	margin-left:13px;
-	margin-bottom:13px;
-}
-
+/*Main Section Styles*/
 section#main > h3{
 	margin-bottom:10px;	
+	font-size:1.5em;
 }
-
-#wrapper.about > section#main > p{
-	text-align:justify;
-	margin-bottom:10px;
-}
-
-#wrapper.services > section#main > p{
-	text-align:justify;
-	margin-bottom:10px;	
-}
-
-#wrapper.services > section#main > ul{
-	margin-left:20px;
-	margin-bottom:10px;	
-}
-
-#main > h3{
-	font-size:1.5em;	
-}
-
 #main > p{
 	margin-top:20px;	
 }
 
+/*Footer/Push div Styles*/
 footer, .push{
 	height:4em;
 	width:100%;
 }
-
 footer{
 	text-align:center;	
 	clear:both;
 }
-
 footer > p{
 	position:relative;
 	top:50px;
 	font-size:.9em;	
 }
 
-footer.services, #push.services{
-	height:2em;	
-}
-
-footer.contact, #push.contact{
-	padding-top:10em;	
-}
-
-footer.about{
-	padding-top:1em;	
-}
-
+/*Aside Styles (Keep Connected)*/
 aside{
 	float:right;
 	border:1px solid black;
@@ -193,24 +114,16 @@ aside{
 	padding-5px;
 	border-radius:10px;
 }
-
 aside > h4{
 	text-align:center;	
 	margin-bottom:10px;
 }
-
 aside > a > img{
 	display:block;
 	margin:0 auto;	
 }
 
-aside.contact{
-	top:0;
-	clear:both;
-	float:left;
-	margin-top:30px;	
-}
-
+/*Action Button Styels*/
 a.button{
 	float:right;
 	position:relative;
@@ -220,11 +133,87 @@ a.button{
 	margin-top:10px;
 }
 
+/*Project Page Specific Styles*/
+#wrapper.projects{
+	width:75%;
+	text-align:center;	
+}
+#wrapper.projects > section#main > div{
+	border:1px black solid;
+	radius:10px;
+	height:320px;
+	width:29%;	
+	float:left;
+	margin-right:5%;
+	margin-top:1em;
+	background:#3a87b5;
+	color:white;
+}
+#wrapper.projects > section#main > div > a{
+	color:white;	
+}
+#wrapper.projects > section#main > div > a:visited{
+	color:white;	
+}
+#wrapper.projects > section#main > div > a:hover{
+	color:black;	
+}
+#wrapper.projects > section#main > div + div + div{
+	margin-right:0;	
+}
+#wrapper.projects > section#main > div > img{
+	width:90%;
+	margin:0 auto;
+	height:250px;	
+	margin-bottom:10px;
+}
 .projects > #main > div > h4{
 	margin-bottom:10px;	
 }
-/* http://www.menucool.com */
 
+/*About Page specific Styles*/
+#wrapper.about > section#main > img{
+	display:block;
+	width:200px;
+	height:200px;
+	float:right;	
+	margin-left:13px;
+	margin-bottom:13px;
+}
+#wrapper.about > section#main > p{
+	text-align:justify;
+	margin-bottom:10px;
+}
+footer.about{
+	padding-top:1em;	
+}
+
+/*Services Page Specific Styles*/
+#wrapper.services > section#main > p{
+	text-align:justify;
+	margin-bottom:10px;	
+}
+#wrapper.services > section#main > ul{
+	margin-left:20px;
+	margin-bottom:10px;	
+}
+footer.services, #push.services{
+	height:2em;	
+}
+
+/*Contact page specific styles*/
+footer.contact, #push.contact{
+	padding-top:10em;	
+}
+aside.contact{
+	top:0;
+	clear:both;
+	float:left;
+	margin-top:30px;	
+}
+
+/* http://www.menucool.com */
+/*Slider Styles*/
 #sliderFrame 
 {
     position:relative;
