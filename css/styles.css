@@ -119,12 +119,30 @@ nav > div > a:hover{
 	margin-bottom:10px;
 }
 
+#wrapper.about > section#main > img{
+	display:block;
+	width:200px;
+	height:200px;
+	float:right;	
+	margin-left:13px;
+	margin-bottom:13px;
+}
+
+#wrapper.about > section#main > h3{
+	margin-bottom:10px;	
+}
+
+#wrapper.about > section#main > p{
+	text-align:justify;
+	margin-bottom:10px;
+}
+
 #main > h3{
 	font-size:1.5em;	
 }
 
 footer, .push{
-	height:5em;
+	height:4em;
 	width:100%;
 }
 
@@ -188,7 +206,7 @@ a.button{
 }
 
 #slider {
-	background:#fff url(loading.gif) no-repeat 50% 50%;
+	background:#fff url(../images/loading.gif) no-repeat 50% 50%;
 	position:relative;
 	margin:0 auto; /*center-aligned*/
     transform: translate3d(0,0,0);
