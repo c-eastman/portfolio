@@ -329,3 +329,29 @@ aside.contact{
 }
 
 #slider>a, #slider video, #slider audio {display:none;}
+
+/* ---------- Business Contacts Styles -----------------*/
+INPUT, SELECT
+{
+    color: #003333;
+    font-size: 90%;
+    border-bottom: #d3d3d3 1px solid;
+    border-left: #d3d3d3 1px solid;
+    border-top: #d3d3d3 1px solid;
+    border-right: #d3d3d3 1px solid;
+}
+
+INPUT[type="submit"]
+{
+    background-color: #336699;
+    color: #f0e68c;
+	cursor:pointer;
+}
+
+.businesslogin > #main, .business > #main{
+	min-height:375px;	
+}
+
+.businesslogin > #mail > ul > li{
+	list-style:none;	
+}

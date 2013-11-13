@@ -1,5 +1,26 @@
 <?php
 	session_start();
+	
+	try{
+	//database credentials
+	$mySQLUsername = 'my_sql_username';
+	$mySQLPassword = 'my_sql_password';
+	$dsn = 'mysql:host=my_sql_host.com;dbname=my_sql_database';
+	//create connection
+	$database = new PDO($dsn, $mySQLUsername, $mySQLPassword);
+	}
+	catch(PDOException $ex)
+	{
+		echo '<p>Sorry, there was a problem accessing the database.</p>
+			  <a href="login.php">Try Again</a>';	
+	}
+
+	$select_statement = "SELECT * FROM `business_contacts`";
+
+	$result = $database->query($select_statement);
+	
+	
+	
 	if(isset($_SESSION["username"]))
 	{ ?>
 	<!DOCTYPE html>
@@ -31,8 +52,22 @@
         	<!-- Main Content Section-->
             <section id="main">
 			  	<h1>Contacts</h1>
-			  	<p>Welcome <?php echo $_SESSION["username"]; ?> </p>
-				<a href="logout.php">Logout</a>
+			  	<p>Welcome <?php echo $_SESSION["username"]; ?>! <a href="logout.php">Logout</a></p>
+                <br>
+                <ul>
+                	<?php
+						foreach($result as $row)
+						{
+							$data = $row['password'];
+							echo "<li><p>Name: ".$row["name"]."</p>
+								  <p>Address: ".$row["address"]."</p>
+								  <p>Phone Number: ".$row["phone"]."</p>
+								  <p>Email: ".$row["email"]."</p>  
+								  </li><br>";
+						}
+					?>
+                </ul>
+				
 			  </section>
 		</div>
         
