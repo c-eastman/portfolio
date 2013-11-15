@@ -1,3 +1,9 @@
+<!-- 
+	Author: Chris Eastman
+    Site: Net-head.ca
+    File name: login.php
+    Purpose: The login page allows users to log in to the database and access secure pages
+-->
 <!DOCTYPE html>
 
 <html>
@@ -30,6 +36,7 @@
             <section id="main">
 	<h1>Business Contact List</h1>
 	<p>Log In to view contacts</p>
+    <!-- Form for user to log in to the database-->
 	<form action="formhandler.php" method="post">
     	Username: <input type="text" name="username" />
         <br>
