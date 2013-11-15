@@ -1,5 +1,5 @@
 <?php
-	session_start();
+session_start();
 	
 	try{
 	//database credentials
@@ -14,12 +14,14 @@
 		echo '<p>Sorry, there was a problem accessing the database.</p>
 			  <a href="login.php">Try Again</a>';	
 	}
-
-	$select_statement = "SELECT * FROM business_contacts ORDER BY name;";
-
-	$result = $database->query($select_statement);
 	
+	$current_contact = $_GET['name'];
 	
+	$select = $database -> prepare("SELECT * FROM business_contacts where name='".$current_contact."' LIMIT 1");
+	
+	$select -> execute();
+	
+	$result = $select -> fetch();
 	
 	if(isset($_SESSION["username"]))
 	{ ?>
@@ -46,30 +48,32 @@
             <div><a href="services.html">Services</a></div>
             <div><a href="https://github.com/c-eastman">GitHub</a></div>
             <div><a href="contact.html">Contact Me</a></div>
-            <div><a href="#" class="active">Contact List</a></div>
+            <div><a href="businesscontacts.php" class="active">Contact List</a></div>
         </nav>
         <!-- Container -->
-        <div id="wrapper" class="business">
+        <div id="wrapper" class="data">
         	<!-- Main Content Section-->
             <section id="main">
-			  	<h1>Contacts</h1>
-			  	<p>Welcome <?php echo $_SESSION["username"]; ?>! <a href="logout.php">Logout</a></p>
-                <br>
+			  	<h1>Contact Information</h1>
+                
                 <ul>
                 	<?php
-						foreach($result as $row)
-						{
+						
 							
-							echo "<li><a href=\"contactdata.php?name=".$row["name"]."\">".$row["name"]."</a>";
-						}
+							echo "<li>Name: ".$result["name"]."</li>
+								 <li>Address: ".$result["address"]."</li>
+								  <li>Phone Number: ".$result["phone"]."</li>
+								  <li>Email: ".$result["email"]."</li>";
+						
 					?>
                 </ul>
+                <a href="businesscontacts.php">Back to Contact List</a>
 				
 			  </section>
 		</div>
         
         <!-- Footer with Copyright Statement-->  
-        <footer class="business">
+        <footer class="data">
         	<p>Copyright &copy; Chris Eastman 2013</p>
         </footer>
 	</body>
@@ -77,4 +81,5 @@
 	<?php }else{
 		header("Location: http://www.net-head.ca/login.php"); // redirects	
 	}
+?>
 ?>

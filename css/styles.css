@@ -364,11 +364,11 @@ INPUT[type="submit"]
 	margin-top:12px;
 }
 
-.businesslogin > #main, .business > #main{
+.businesslogin > #main, .business > #main, .data > #main{
 	min-height:375px;	
 }
 
-.business > #main > ul > li{
+.business > #main > ul > li, .data > #mail > ul > li{
 	list-style:none;	
 }
 
@@ -385,4 +385,26 @@ INPUT[type="submit"]
 	border-radius:5px;
 	padding:15px;
 	border:1px solid #3a87b5;
+}
+
+.data > #main{
+	text-align:center;	
+}
+
+.data > #main > ul > li{
+	margin-top:15px;
+	list-style:none;
+}
+
+.data > #main > a{
+	margin-top:50px;
+	display:block;	
+}
+
+.business > #main{
+	text-align:center;	
+}
+
+.business > #main > ul > li > a{
+	line-height:30px;	
 }
