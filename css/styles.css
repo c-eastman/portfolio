@@ -48,7 +48,7 @@ nav{
 }
 nav > div{
 	float:left;
-	width:16.6%;
+	width:14.25%;
 	text-align:center;
 	font-size:1.2em;
 	border-radius:2px;
@@ -339,19 +339,50 @@ INPUT, SELECT
     border-left: #d3d3d3 1px solid;
     border-top: #d3d3d3 1px solid;
     border-right: #d3d3d3 1px solid;
+	height:20px;
+	margin-bottom:15px;
+	width:200px;
+}
+
+INPUT[type="password"]
+{
+	position:relative;
+	left:4px;	
 }
 
 INPUT[type="submit"]
 {
-    background-color: #336699;
-    color: #f0e68c;
+    background-color:#3a87b5;
+    color: #ffffff;
 	cursor:pointer;
+	display:block;
+	width:100px;
+	height:40px;
+	font-size:120%;
+	border-radius:10px;
+	margin:0 auto;
+	margin-top:12px;
 }
 
 .businesslogin > #main, .business > #main{
 	min-height:375px;	
 }
 
-.businesslogin > #mail > ul > li{
+.business > #main > ul > li{
 	list-style:none;	
+}
+
+.businesslogin > #main > h1, .businesslogin > #main > p{
+	text-align:center;	
+}
+
+.businesslogin > #main > form{
+	width:300px;
+	margin:0 auto;
+	display:block;	
+	margin-top:18px;
+	background-color:#d6d6d6;
+	border-radius:5px;
+	padding:15px;
+	border:1px solid #3a87b5;
 }

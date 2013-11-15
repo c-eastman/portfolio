@@ -21,14 +21,15 @@
             <div><a href="projects.html">Projects</a></div>
             <div><a href="services.html">Services</a></div>
             <div><a href="https://github.com/c-eastman">GitHub</a></div>
-            <div><a href="contact.html">Contact</a></div>
+            <div><a href="contact.html">Contact Me</a></div>
+            <div><a href="#" class="active">Contact List</a></div>
         </nav>
         <!-- Container, Some About Specific Styles -->
         <div id="wrapper" class="businesslogin">
         	<!-- Main Content Section-->
             <section id="main">
 	<h1>Business Contact List</h1>
-	<h2>Log In to view contacts</h2>
+	<p>Log In to view contacts</p>
 	<form action="formhandler.php" method="post">
     	Username: <input type="text" name="username" />
         <br>
