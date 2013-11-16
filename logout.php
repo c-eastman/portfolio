@@ -1,10 +1,10 @@
-<!-- 
+<?php
+/*
 	Author: Chris Eastman
     Site: net-head.ca
     File name: logout.php
     Purpose: The logout page destroys the session and redirects to the login page
--->
-<?php
+*/
 	session_start();
 
 	$_SESSION["username"] = "";

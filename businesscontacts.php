@@ -1,11 +1,17 @@
 <?php
+	/*
+	Author: Chris Eastman
+    Site: Net-head.ca
+    File Name: businesscontacts.php
+    Purpose: If the user has been authenticated and allowed access to the database, this page shows a list of secured business contacts
+*/
 	session_start();
 	
 	try{
 	//database credentials
 	$mySQLUsername = 'my_sql_username';
 	$mySQLPassword = 'my_sql_password';
-	$dsn = 'mysql:host=my_sql_host.com;dbname=my_sql_dbname';
+	$dsn = 'mysql:host=my_sql_host;dbname=my_sql_dbname';
 	//create connection
 	$database = new PDO($dsn, $mySQLUsername, $mySQLPassword);
 	}
@@ -15,12 +21,13 @@
 			  <a href="login.php">Try Again</a>';	
 	}
 
+	//prepare select statement to show all business contacts
 	$select_statement = "SELECT * FROM business_contacts ORDER BY name;";
-
+	
+	//store results 
 	$result = $database->query($select_statement);
 	
-	
-	
+	//if session exists (user is logged in) show the content
 	if(isset($_SESSION["username"]))
 	{ ?>
 	<!DOCTYPE html>
@@ -53,10 +60,12 @@
         	<!-- Main Content Section-->
             <section id="main">
 			  	<h1>Contacts</h1>
+                <!-- Welcome message and logout link-->
 			  	<p>Welcome <?php echo $_SESSION["username"]; ?>! <a href="logout.php">Logout</a></p>
                 <br>
                 <ul>
                 	<?php
+						//show each of the business contacts in a list, each with a link to their personal information
 						foreach($result as $row)
 						{
 							
@@ -74,6 +83,7 @@
         </footer>
 	</body>
 </html>
+	<!-- if user is not signed in, redirect them to login page-->
 	<?php }else{
 		header("Location: http://www.net-head.ca/login.php"); // redirects	
 	}

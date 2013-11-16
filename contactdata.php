@@ -1,11 +1,17 @@
 <?php
+/*
+	Author: Chris Eastman
+    Site: Net-Head.ca
+    File Name: contactdata.php
+    Purpose: Retrieves information specific to the contact chosen
+*/
 session_start();
 	
 	try{
 	//database credentials
 	$mySQLUsername = 'my_sql_username';
 	$mySQLPassword = 'my_sql_password';
-	$dsn = 'mysql:host=my_sql_host.com;dbname=my_sql_dbname';
+	$dsn = 'mysql:host=my_sql_host;dbname=my_sql_dbname';
 	//create connection
 	$database = new PDO($dsn, $mySQLUsername, $mySQLPassword);
 	}
@@ -15,14 +21,17 @@ session_start();
 			  <a href="login.php">Try Again</a>';	
 	}
 	
+	//grab contacts name from url
 	$current_contact = $_GET['name'];
 	
+	//prepare and execute select statement
 	$select = $database -> prepare("SELECT * FROM business_contacts where name='".$current_contact."' LIMIT 1");
-	
 	$select -> execute();
 	
+	//save result
 	$result = $select -> fetch();
 	
+	//if username session still exists
 	if(isset($_SESSION["username"]))
 	{ ?>
 	<!DOCTYPE html>
@@ -58,15 +67,14 @@ session_start();
                 
                 <ul>
                 	<?php
-						
-							
+						//list selected contact's information
 							echo "<li>Name: ".$result["name"]."</li>
 								 <li>Address: ".$result["address"]."</li>
 								  <li>Phone Number: ".$result["phone"]."</li>
 								  <li>Email: ".$result["email"]."</li>";
-						
 					?>
                 </ul>
+                <!-- Link to return to contacts list-->
                 <a href="businesscontacts.php">Back to Contact List</a>
 				
 			  </section>
@@ -78,6 +86,7 @@ session_start();
         </footer>
 	</body>
 </html>
+	<!-- If no session (they aren't signed in) return to login page-->
 	<?php }else{
 		header("Location: http://www.net-head.ca/login.php"); // redirects	
 	}
